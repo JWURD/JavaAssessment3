@@ -1,4 +1,4 @@
-/*package user_management;
+package user_management;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -77,4 +77,4 @@ public class UserTest {
         assertEquals("Wilhem - wilhem@zipcodewilmington.com", user.toString());
 
     }
-}*/
+}

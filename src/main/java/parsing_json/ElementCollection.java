@@ -32,29 +32,22 @@ public class ElementCollection extends ArrayList<Element> {
     }
 
     public ElementCollection where(String fieldName, Object value) {
-
-
-        Field field = null;
-        try {
-            field = Element.class.getField(fieldName);
-            Object o = field.get(value);
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+//only return a list of values
         while (super.listIterator().hasNext()) {
             Element e = super.listIterator().next();
 
             try {
-                if(!e.getClass().getField(fieldName).get(value).equals(value)){
-                    super.remove(e);
+                Field field = e.getClass().getField(fieldName);
+                Object o = field.get(value);
+                if(o != null){
+                    remove(e);
                 }
-            } catch (IllegalAccessException e1) {
-                e1.printStackTrace();
             } catch (NoSuchFieldException e1) {
                 e1.printStackTrace();
-            } {
+            } catch (IllegalAccessException e1) {
+                e1.printStackTrace();
+            }
+            {
 
             }
 
