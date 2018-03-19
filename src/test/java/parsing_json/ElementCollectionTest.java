@@ -74,7 +74,7 @@ public class ElementCollectionTest {
 
     }
 
-    @Test
+   @Test
     public void where() {
         ElementCollection expected = new ElementCollection() {{add(new Element(
                 "Hydrogen",

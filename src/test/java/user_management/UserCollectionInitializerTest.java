@@ -1,4 +1,4 @@
-package user_management;
+/*package user_management;
 
 import org.junit.Test;
 import parsing_json.ElementCollectionInitializer;
@@ -13,4 +13,4 @@ public class UserCollectionInitializerTest {
     public void generate() throws IOException {
         assertEquals(1000, UserCollectionInitializer.generate().size());
     }
-}
+}*/
